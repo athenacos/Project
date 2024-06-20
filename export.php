@@ -1,10 +1,14 @@
 <?php
 require 'vendor/autoload.php';
 
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use TCPDF;
+
 $servername = "localhost";
 $username = "root";
-$password = ""; 
-$dbname = "dbPegawai"; 
+$password = "";
+$dbname = "dbPegawai";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
@@ -14,9 +18,6 @@ if ($conn->connect_error) {
 $nip = $_POST['nip'];
 
 if (isset($_POST["export_excel"])) {
-    use PhpOffice\PhpSpreadsheet\Spreadsheet;
-    use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
     $spreadsheet = new Spreadsheet();
     $sheet = $spreadsheet->getActiveSheet();
 
@@ -44,8 +45,6 @@ if (isset($_POST["export_excel"])) {
 }
 
 if (isset($_POST["export_pdf"])) {
-    use TCPDF;
-
     $pdf = new TCPDF();
     $pdf->AddPage();
     $html = '<h1>Employee Details</h1>';

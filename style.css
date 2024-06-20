@@ -6,17 +6,40 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f7f7f7;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    gap: 50px;
+    max-width: 500px;
 }
 
 form {
     margin-bottom: 20px;
 }
 
+.form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
 label {
+   font-size: 14px;
     display: block;
     margin-bottom: 5px;
+    font-weight: 600;
 }
 
 input[type="text"], input[type="submit"] {

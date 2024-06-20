@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Search Employee</title>
+    <title>J0303211149 Annisa Aulia Rohim</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -25,7 +25,7 @@ if ($conn->connect_error) {
             id="nip" 
             name="nip" 
             required 
-            placeholder="Masukkan nip anda">
+            placeholder="Masukkan NIP">
         <input type="submit" value="Search">
     </form>
 
